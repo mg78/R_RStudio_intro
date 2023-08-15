@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | A brief introduction to using R and RStudio</title>
+  <title>4 Answers | A brief introduction to using R and RStudio</title>
   <meta name="description" content="A brief overview of R and RStudio with examples using data from Wordbank" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | A brief introduction to using R and RStudio" />
+  <meta property="og:title" content="4 Answers | A brief introduction to using R and RStudio" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A brief overview of R and RStudio with examples using data from Wordbank" />
   <meta name="github-repo" content="mg78/R_RStudio_intro" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | A brief introduction to using R and RStudio" />
+  <meta name="twitter:title" content="4 Answers | A brief introduction to using R and RStudio" />
   
   <meta name="twitter:description" content="A brief overview of R and RStudio with examples using data from Wordbank" />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="during.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -181,18 +181,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="answers" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Answers<a href="answers.html#answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="step-1-loading-packages-1" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Step 1: Loading packages<a href="answers.html#step-1-loading-packages-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>TASK 1B</strong>
+library(here)
+library(tidyverse)
+library(skimr)
+library(wordbankr)</p>
+</div>
+<div id="step-2-read-in-the-data-1" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Step 2: Read in the data<a href="answers.html#step-2-read-in-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>TASK 2A</strong>
+The <code>get_administration_data()</code> function gives by-administration information. You can specify language and/or form.
+The <code>get_item_data()</code> function gives by-item information. Again, you can specify language and/or form.</p>
+<p><strong>TASK 2B</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="answers.html#cb15-1" aria-hidden="true" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
+</div>
+<div id="step-3-exploring-the-data-1" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Step 3: Exploring the data<a href="answers.html#step-3-exploring-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>TASK 3</strong>
+* There are 987 observations for 15 variables.
+* The variables data_id, age, comprehension, and production are numeric.
+* The following variables contain missing values: zygosity, birth_order, ethnicity, mom_ed.
+* The variable ‘longitudinal’ is a logical variable that can have the values ‘TRUE’ or ‘FALSE’.
+* The minimum child age is 16 months.
+* Personally, I find the skim() function most informative as it groups different types of variables (character, logical, numeric etc.) and provides useful overviews (missing values, some summary statistics). I do however, also always use the head() and tail() functions to get a better feeling for the data.</p>
+</div>
+<div id="step-5-visualise-the-data-1" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Step 5: Visualise the data<a href="answers.html#step-5-visualise-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>TASK 5B</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="answers.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> production)) <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="answers.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a href="answers.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="answers.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><strong>TASK 5C</strong>
+There are roughly similar numbers of children across ages between 16 and 30 months. The vocabulary measure is highly skewed, with more children producing 50 words or less.</p>
+<p><strong>TASK 5F</strong>
+The value of the alpha aesthetic determines the opacity (or transparency) of the individual data points.</p>
+<p><strong>TASK 5G</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="answers.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="answers.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb17-4"><a href="answers.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
+<p><strong>TASK 5H</strong>
+Darker areas of the plot reflect more overlapping data points in those areas.</p>
+<p><strong>TASK 5J</strong>
+From the plot with lines of best fit, we can see that, on average, girls produce slightly more words than boys.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="during.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -224,7 +269,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jules32/bookdown-tutorial/edit/master/%s",
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/during.Rmd",
 "text": "Edit"
 },
 "history": {

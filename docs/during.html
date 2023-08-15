@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="before.html"/>
-
+<link rel="next" href="answers.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
@@ -74,13 +138,29 @@
 <li><a href="./">R and RStudio intro</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a></li>
 <li class="chapter" data-level="2" data-path="before.html"><a href="before.html"><i class="fa fa-check"></i><b>2</b> Before the practical session</a>
 <ul>
 <li class="chapter" data-level="2.0.1" data-path="before.html"><a href="before.html#watch-the-introductory-video-20-minutes"><i class="fa fa-check"></i><b>2.0.1</b> Watch the introductory video (~20 minutes)</a></li>
 <li class="chapter" data-level="2.0.2" data-path="before.html"><a href="before.html#getting-started"><i class="fa fa-check"></i><b>2.0.2</b> Getting started</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="during.html"><a href="during.html"><i class="fa fa-check"></i><b>3</b> During the practical session</a></li>
+<li class="chapter" data-level="3" data-path="during.html"><a href="during.html"><i class="fa fa-check"></i><b>3</b> During the practical session</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="during.html"><a href="during.html#step-1-loading-packages"><i class="fa fa-check"></i><b>3.1</b> Step 1: Loading packages</a></li>
+<li class="chapter" data-level="3.2" data-path="during.html"><a href="during.html#step-2-read-in-the-data"><i class="fa fa-check"></i><b>3.2</b> Step 2: Read in the data</a></li>
+<li class="chapter" data-level="3.3" data-path="during.html"><a href="during.html#step-3-exploring-the-data"><i class="fa fa-check"></i><b>3.3</b> Step 3: Exploring the data</a></li>
+<li class="chapter" data-level="3.4" data-path="during.html"><a href="during.html#step-4-select-relevant-variables"><i class="fa fa-check"></i><b>3.4</b> Step 4: Select relevant variables</a></li>
+<li class="chapter" data-level="3.5" data-path="during.html"><a href="during.html#step-5-visualise-the-data"><i class="fa fa-check"></i><b>3.5</b> Step 5: Visualise the data</a></li>
+<li class="chapter" data-level="3.6" data-path="during.html"><a href="during.html#step-6-model-the-data"><i class="fa fa-check"></i><b>3.6</b> Step 6: Model the data</a></li>
+<li class="chapter" data-level="3.7" data-path="during.html"><a href="during.html#step-7-write-up-the-results"><i class="fa fa-check"></i><b>3.7</b> Step 7: Write up the results</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="answers.html"><a href="answers.html"><i class="fa fa-check"></i><b>4</b> Answers</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="answers.html"><a href="answers.html#step-1-loading-packages-1"><i class="fa fa-check"></i><b>4.1</b> Step 1: Loading packages</a></li>
+<li class="chapter" data-level="4.2" data-path="answers.html"><a href="answers.html#step-2-read-in-the-data-1"><i class="fa fa-check"></i><b>4.2</b> Step 2: Read in the data</a></li>
+<li class="chapter" data-level="4.3" data-path="answers.html"><a href="answers.html#step-3-exploring-the-data-1"><i class="fa fa-check"></i><b>4.3</b> Step 3: Exploring the data</a></li>
+<li class="chapter" data-level="4.4" data-path="answers.html"><a href="answers.html#step-5-visualise-the-data-1"><i class="fa fa-check"></i><b>4.4</b> Step 5: Visualise the data</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -103,16 +183,162 @@
             <section class="normal" id="section-">
 <div id="during" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> During the practical session<a href="during.html#during" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Materials will be added soon.</p>
-
+<p>In this practical session, we’ll use data from the Wordbank database to explore, graph and model some vocabulary data in Cantonese.</p>
+<div id="step-1-loading-packages" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Step 1: Loading packages<a href="during.html#step-1-loading-packages" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Check the following packages (also called ‘libraries’) are installed: here, tidyverse, skimr and wordbankr and add some code to the script to load them. If you’ve worked your way through the RYouWithMe BasicBasics units, you’ll be familiar with the first three. The fourth we’ll talk more about in step 2.</p>
+<blockquote>
+<p><strong>TASK 1A</strong>: Check the packages are installed. <strong>HINT</strong>: Look at the ‘Packages’ tab in the bottom right panel. If they have not been installed previously, use the code snippet below to install them.</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="during.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>()</span></code></pre></div>
+<blockquote>
+<p><strong>TASK 1B</strong>: Load the packages, using the code snippet below</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="during.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>()</span></code></pre></div>
+</div>
+<div id="step-2-read-in-the-data" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Step 2: Read in the data<a href="during.html#step-2-read-in-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will be working with some ‘Wordbank’ data. Wordbank is a large open database of children’s vocabulary development. More commonly, you’ll be accessing data by reading in a file (such as a .csv file). However, the Workbank data can be accessed from R via the wordbankr package. You can read more about Wordbank on their <a href="http://wordbank.stanford.edu"><strong>website</strong></a> and in their free <a href="https://wordbank-book.stanford.edu"><strong>online book</strong></a>.</p>
+<blockquote>
+<p><strong>TASK 2A</strong>: Let’s check the vignette of the wordbankr package to learn a bit more about the package and accessing the data. If you have successfully installed the wordbankr package, you can type ??wordbankr in the console. A link to the vignette should appear in the ‘Help’ tab in the bottom right window. Click on the link, have a look at the vignette and try to work out what the <code>get_administration_data()</code> function does? How is it different from the <code>get_item_data()</code> function? If this doesn’t work for you, you can also access the vignette <a href="https://langcog.github.io/wordbankr/articles/wordbankr.html"><strong>here</strong></a>.</p>
+</blockquote>
+<p>Now let’s read in data for words and sentences in Cantonese.</p>
+<blockquote>
+<p><strong>TASK 2B</strong>: Use the code snippet below to read in data for WS (words and sentences) form in Cantonese. Assign the data to a dataframe called ‘voc_cantonese’.</p>
+</blockquote>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="during.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;&quot;</span>, <span class="at">form =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+</div>
+<div id="step-3-exploring-the-data" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Step 3: Exploring the data<a href="during.html#step-3-exploring-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now let’s get a feel for these data. Use one or more of the following functions to have a look: <code>dim()</code>, <code>str()</code>, <code>glimpse()</code>, <code>head()</code>, <code>tail()</code>, <code>skim()</code> and <code>summary()</code>.</p>
+<blockquote>
+<p><strong>TASK 3</strong>: Answer the following questions: How many observations are there for how many variables? Which of these variables numeric? Which of these variables contain missing values (‘NA’s)? What type of variable is ’longitudinal’? What is the minimum child age? Which of these functions do you find most informative and why?</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="during.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(voc_cantonese)</span>
+<span id="cb4-2"><a href="during.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(voc_cantonese)</span>
+<span id="cb4-3"><a href="during.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(voc_cantonese)</span>
+<span id="cb4-4"><a href="during.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(voc_cantonese)</span>
+<span id="cb4-5"><a href="during.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(voc_cantonese)</span>
+<span id="cb4-6"><a href="during.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(voc_cantonese)</span>
+<span id="cb4-7"><a href="during.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(voc_cantonese)</span></code></pre></div>
+</div>
+<div id="step-4-select-relevant-variables" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Step 4: Select relevant variables<a href="during.html#step-4-select-relevant-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We don’t need all the variables that are currently in the data frame. Let’s use the <code>select()</code> function (from the dplyr package, part of the tidyverse) to keep only those that we do need.</p>
+<blockquote>
+<p><strong>TASK 4A</strong>: Use the bit of code below to keep the following variables: age, language, sex, production and assign these to a new dataframe called ‘voc_cantonese_select’. Check you understand what each bit in the code does. Remember, you can type ?select in the console to get more information on the <code>select()</code> function.</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="during.html#cb5-1" aria-hidden="true" tabindex="-1"></a>voc_cantonese_select <span class="ot">&lt;-</span> <span class="fu">select</span>(voc_cantonese, age, language, sex, production)</span></code></pre></div>
+<p>Sometimes it is helpful to save the smaller dataframe to a csv file. This will allow you to just read in the relevant bits in future, without having to read in the complete data (which can be time-consuming if the complete data contains thousands of rows and lots of variables). We can do both of these steps in one go, using what is called a ‘pipe’ using the code below. Essentially, we are taking the dataframe with Cantonese vocabulary data (voc_cantonese), and then select relevant variables, and then write those to a csv-file.</p>
+<blockquote>
+<p><strong>TASK 4B</strong>: Use the code snippet below to do this. Again, check you understand what each bit in the code does and please do ask if you’re not sure.</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="during.html#cb6-1" aria-hidden="true" tabindex="-1"></a>voc_cantonese_select <span class="ot">&lt;-</span> voc_cantonese <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="during.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(age, language, sex, production) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="during.html#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">&#39;voc_cantonese_select.csv&#39;</span>))</span></code></pre></div>
+<p>If, for some reason, you weren’t able to access the wordbankr database, you can download the data here <a href="files/voc_cantonese_select.csv">voc_cantonese_select.csv</a>. Put this file in your working directory (where ‘here’ points to).</p>
+<blockquote>
+<p><strong>TASK 4C</strong>: Just to practise reading in data from a .csv file, use the code snippet below to do so.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="during.html#cb7-1" aria-hidden="true" tabindex="-1"></a>voc_cantonese_select <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">&#39;voc_cantonese_select.csv&#39;</span>))</span></code></pre></div>
+</div>
+<div id="step-5-visualise-the-data" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Step 5: Visualise the data<a href="during.html#step-5-visualise-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ll start with making some histograms to get an idea of the distribution of some of the variables.</p>
+<blockquote>
+<p><strong>TASK 5A</strong>: Use the code snippet below to make a histogram for ‘age’.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="during.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> <span class="co">#Tell R what data to use in the first argument, then specify variable you want to plot in x = </span></span>
+<span id="cb8-2"><a href="during.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span>                         <span class="co">#The geom &#39;geom_histrogram&#39; tells R how to plot the data</span></span>
+<span id="cb8-3"><a href="during.html#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>) <span class="sc">+</span>              <span class="co">#labs() can be used to label axes properly</span></span>
+<span id="cb8-4"><a href="during.html#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                                 <span class="co">#There are lots of different &#39;themes&#39; in ggplot that give you options in terms of the look of the plot</span></span></code></pre></div>
+<blockquote>
+<p><strong>TASK 5B</strong>: Using the code snippet above as a template, now add some code to the script to make a histogram for the productive vocabulary measure</p>
+</blockquote>
+<blockquote>
+<p><strong>TASK 5C</strong>: Look at the histograms. What do they tell you about the variables age and productive vocabulary?</p>
+</blockquote>
+<p>Let’s now plot the productive vocabulary data as a function of age in a scatterplot.</p>
+<blockquote>
+<p><strong>TASK 5D</strong>: Use the code snippet below to create a scatterplot with productive vocabulary and age.</p>
+</blockquote>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="during.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="during.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb9-3"><a href="during.html#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a href="during.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>)</span></code></pre></div>
+<p>In this plot, each dot represents the data from one child. Some are plotted on top of each other (having the same or very similar scores). We can use a different geom to help with that.</p>
+<blockquote>
+<p><strong>TASK 5E</strong>: Use the code snippet below to do so. To find out more on what the <code>geom_jitter()</code> function does and what further options it gives you, type ?geom_jitter in the console.</p>
+</blockquote>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="during.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="during.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="during.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a href="during.html#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>)</span></code></pre></div>
+<p>This plot does make more points visible, but there is still quite a few overlapping points. We can use the ‘alpha’ aesthetic to improve the plot further.</p>
+<blockquote>
+<p><strong>TASK 5F</strong>: Have a look at <a href="https://ggplot2.tidyverse.org/reference/aes_colour_fill_alpha.html"><strong>this website</strong></a> to work out what the ‘alpha’ aesthetic does. What does it do?</p>
+</blockquote>
+<p>Let’s get a better idea of this by specifying a different ‘alpha’ value as an argument of the geom_jitter() function.</p>
+<blockquote>
+<p><strong>TASK 5G</strong>: Specify a value of alpha as an argument to the <code>geom_jitter()</code> function to make the data points more transparent.</p>
+</blockquote>
+<blockquote>
+<p><strong>TASK 5H</strong>: Have a look at the new plot. What do the darker areas of the plot represent?</p>
+</blockquote>
+<p>So far we have plotted the data for boys and girls together. But there is evidence that vocabulary development for boys and girls differs and that variable is present in the dataset. We can plot data for boys and girls separately by choosing different colours.</p>
+<blockquote>
+<p><strong>TASK 5I</strong>: Use the code snippet below to use different colours for boys and girls.</p>
+</blockquote>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="during.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production, <span class="at">colour =</span> sex)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="during.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="during.html#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a href="during.html#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
+<p>Finally, we can add lines of best fit to summarise the relationships between age and productive vocabulary for boys and girls.
+&gt;<strong>TASK 5J</strong>: Use the code snippet below to add lines of best fit. What do you conclude from the plot?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="during.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production, <span class="at">colour =</span> sex)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="during.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="during.html#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&#39;lm&#39;</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="during.html#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb12-5"><a href="during.html#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>)</span></code></pre></div>
+</div>
+<div id="step-6-model-the-data" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Step 6: Model the data<a href="during.html#step-6-model-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, it is useful to compute some descriptive statistics, and we’ll do so for boys and girls separately, using the <code>summarise()</code> function.</p>
+<blockquote>
+<p><strong>TASK 6A</strong>: Use the code snippet below to calculate descriptive statistics. Check you understand what each part of the code does.</p>
+</blockquote>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="during.html#cb13-1" aria-hidden="true" tabindex="-1"></a>descriptives <span class="ot">&lt;-</span> voc_cantonese_select <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="during.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_voc =</span> <span class="fu">mean</span>(production, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-3"><a href="during.html#cb13-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_voc =</span> <span class="fu">sd</span>(production, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-4"><a href="during.html#cb13-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">min_voc =</span> <span class="fu">min</span>(production, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-5"><a href="during.html#cb13-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">max_voc =</span> <span class="fu">max</span>(production, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-6"><a href="during.html#cb13-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_age =</span> <span class="fu">mean</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-7"><a href="during.html#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_age =</span> <span class="fu">sd</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-8"><a href="during.html#cb13-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">min_age =</span> <span class="fu">min</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-9"><a href="during.html#cb13-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">max_age =</span> <span class="fu">max</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb13-10"><a href="during.html#cb13-10" aria-hidden="true" tabindex="-1"></a>descriptives</span></code></pre></div>
+<p>Now, we will fit a regression model to test the hypothesis that age and sex account for variation in the number of words that a child produces. To keep it simple, we’ll use linear regression, although there are reasons to believe that is a simplification (the relationship might not be linear, but this is just to give you an idea). To specify the regression model we use the <code>lm()</code> function. This takes as arguments the outcome or dependent variable y (production) as a function of the predictor or independent variables x1 (age) and x2 (sex), as well as the data to be used. We assign this output to a dataframe called ‘mod’ (for model). The summary() function summarises the main results of the model; we’ve assigned that summary to a dataframe called ‘mod_summary’. To see the summary in the console, we have to call it.</p>
+<blockquote>
+<p><strong>TASK 6B</strong>: Use the code snippet below to fit a linear model.</p>
+</blockquote>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="during.html#cb14-1" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(production <span class="sc">~</span> age <span class="sc">+</span> sex, <span class="at">data =</span> voc_cantonese_select) </span>
+<span id="cb14-2"><a href="during.html#cb14-2" aria-hidden="true" tabindex="-1"></a>mod_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(mod)</span>
+<span id="cb14-3"><a href="during.html#cb14-3" aria-hidden="true" tabindex="-1"></a>mod_summary</span></code></pre></div>
+<p>When we call ‘mod_summary’, R writes the content of that dataframe to the console. It tells us that the overall model is significant (p-value: &lt;2.2e-16), and that together, the predictors (age and sex) account for 52.2% of variance in the number of words children produce (Adjusted R-squared = 0.522*100). Under ‘coefficients’ you can see that both predictors (age and sex) are significant (values under ‘Pr(&gt;|t|) are smaller than 0.05). You can also see that the estimate for age is positive, indicating that with increasing age, productive vocabulary increases. The negative value for the estimate for sex indicates that boys (’Male’ category) score lower than girls (the reference category, in this case ‘Female’).</p>
+</div>
+<div id="step-7-write-up-the-results" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Step 7: Write up the results<a href="during.html#step-7-write-up-the-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You could write this up as follows: “A linear regression was performed with productive vocabulary (<em>M</em> = 273, <em>SD</em> = 220) as the outcome variable and age (<em>M</em> = 23.2, <em>SD</em> = 4.2) and sex (485 girls, 502 boys) as the predictor variables. The results of the regression indicated that the model significantly predicted productive vocabulary (<em>F</em>(2, 984) = 539.4, <em>p</em> &lt; .001, adjusted R2 = 0.52), accounting for 52% of the variance. Age was a significant positive predictor (<em>beta</em> = 37.29, <em>p</em> &lt; .001): as age increased, productive vocabulary increased. Boys scored lower than girls (beta = -49.92, p &lt; .001).”</p>
+<p>This follows APA guidelines which are widely used within psychology and psycholinguistics. The <a href="https://owl.purdue.edu/owl/research_and_citation/apa6_style/apa_formatting_and_style_guide/statistics_in_apa.html"><strong>Purdue Writing lab website</strong></a>) is helpful for guidance on punctuating statistics). Journals in linguistics might use different guidelines.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="before.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="before.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="answers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -12,8 +12,6 @@ github-repo: mg78/R_RStudio_intro
 description: "A brief overview of R and RStudio with examples using data from Wordbank"
 ---
 
-# Welcome {#welcome}
-
-Hi,
+# Welcome! {#welcome}
 
 This is a collection of tuition material written for participants of the L+ summer/winterschool. They serve to provide a brief overview of what R and RStudio can be used for.

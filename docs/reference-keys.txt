@@ -12,3 +12,4 @@ getting-started
 r-markdown
 including-plots
 before
+during

@@ -1,10 +1,10 @@
 # Before the practical session {#before}
 
-Welcome to the practical session on R and RStudio. In this session we will look at why you want to use R and RStudio and how to get started.
+Welcome to the practical session on R and RStudio. In this session we will look at why you would want to use R and RStudio and how to get started.
 
-Ideally, you'd complete a few things before the practical session: Watch the introductory video, get R and RStudio installed on your machine and get a brief overview of RStudio.
+Ideally, you'd complete a few things before the practical session: Watch the introductory video, get R and RStudio installed on your machine and get a brief overview of RStudio. If you don't have time to do this, don't worry, the practical session will be useful anyway.
 
-In the practical session we will then be able to focus on reading in some data, doing a bit of data manipulation, visualising data, complete some simple stats and use RMarkdown for writing up a report.
+In the practical session we will focus on reading in some data, doing a bit of data manipulation, visualising data, complete some simple stats and use RMarkdown for writing up a report.
 
 ### Watch the introductory video (~20 minutes)
 In this video I talk you through what we will be doing in the practical session and why. I also introduce various resources to get you started. You can download the slides of the presentation (with clickable urls) below.

@@ -28,3 +28,9 @@ step-4-select-relevant-variables-1
 step-5-visualise-the-data-1
 step-6-model-the-data-1
 step-7-write-up-the-results-1
+resources
+introductions
+more-on-basics-of-working-with-data-in-r
+more-advanced
+basic-stats
+more-comprehensive-stats

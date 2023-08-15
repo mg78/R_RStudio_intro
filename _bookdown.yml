@@ -4,6 +4,7 @@ language:
 rmd_files: [
   "index.Rmd",
   "before.Rmd",
-  "during.Rmd"]
+  "during.Rmd",
+  "resources.Rmd"]
 delete_merged_file: true 
 output_dir: "docs"

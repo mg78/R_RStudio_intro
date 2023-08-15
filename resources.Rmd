@@ -1,0 +1,20 @@
+# Resources {#resources}
+
+Today we've just given you a very brief overview of R and R Studio. If you want to take this further, please see the resources below. In the video (see under 'Before the practical session'), I you through what these all are and how they might be useful.
+
+## Introductions
+* [**RYouWithMe**](https://rladiessydney.org/courses/ryouwithme/) (Rladies - Sydney)
+* [**R for Reproducible Scientific Analysis**](https://swcarpentry.github.io/r-novice-gapminder/) (Software Carpentry)
+
+## More on basics of working with data in R
+* [**R Studio Primers**](https://posit.cloud/learn/primers)
+
+## More advanced
+* [**R for Data Science**](https://r4ds.had.co.nz/index.html) (Hadley Wickham & Garrett Grolemund)
+
+## Basic stats
+* [**Teacups, giraffes and statistics**](https://tinystats.github.io/teacups-giraffes-and-statistics/index.html) (Hasse Walum & Desirée de Leon)
+* [**PsyTeachR**](https://psyteachr.github.io) (Glasgow University)
+
+## More comprehensive stats
+* [**Winter, B. (2020). Statistics for Linguists: An Introduction Using R.**](https://bodowinter.com/books.html)

@@ -194,10 +194,12 @@ Below you will find answers to tasks and questions in the tuition material. An R
 
 ## Step 1: Loading packages
 **TASK 1B**
+```{r eval=FALSE}
 library(here)
 library(tidyverse)
 library(skimr)
 library(wordbankr)
+```
 
 ## Step 2: Read in the data
 **TASK 2A**

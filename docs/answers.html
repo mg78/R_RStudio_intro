@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Answers | A brief introduction to using R and RStudio</title>
   <meta name="description" content="A brief overview of R and RStudio with examples using data from Wordbank" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Answers | A brief introduction to using R and RStudio" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Margriet A. Groen" />
 
 
-<meta name="date" content="2023-08-15" />
+<meta name="date" content="2023-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="during.html"/>
-
+<link rel="next" href="resources.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="lib/css/style.css" type="text/css" />
@@ -161,6 +165,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="answers.html"><a href="answers.html#step-3-exploring-the-data-1"><i class="fa fa-check"></i><b>4.3</b> Step 3: Exploring the data</a></li>
 <li class="chapter" data-level="4.4" data-path="answers.html"><a href="answers.html#step-5-visualise-the-data-1"><i class="fa fa-check"></i><b>4.4</b> Step 5: Visualise the data</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>5</b> Resources</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="resources.html"><a href="resources.html#introductions"><i class="fa fa-check"></i><b>5.1</b> Introductions</a></li>
+<li class="chapter" data-level="5.2" data-path="resources.html"><a href="resources.html#more-on-basics-of-working-with-data-in-r"><i class="fa fa-check"></i><b>5.2</b> More on basics of working with data in R</a></li>
+<li class="chapter" data-level="5.3" data-path="resources.html"><a href="resources.html#more-advanced"><i class="fa fa-check"></i><b>5.3</b> More advanced</a></li>
+<li class="chapter" data-level="5.4" data-path="resources.html"><a href="resources.html#basic-stats"><i class="fa fa-check"></i><b>5.4</b> Basic stats</a></li>
+<li class="chapter" data-level="5.5" data-path="resources.html"><a href="resources.html#more-comprehensive-stats"><i class="fa fa-check"></i><b>5.5</b> More comprehensive stats</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
 
@@ -197,7 +209,7 @@ library(wordbankr)</p>
 The <code>get_administration_data()</code> function gives by-administration information. You can specify language and/or form.
 The <code>get_item_data()</code> function gives by-item information. Again, you can specify language and/or form.</p>
 <p><strong>TASK 2B</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="answers.html#cb15-1" aria-hidden="true" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="answers.html#cb15-1" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
 </div>
 <div id="step-3-exploring-the-data-1" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Step 3: Exploring the data<a href="answers.html#step-3-exploring-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -212,19 +224,19 @@ The <code>get_item_data()</code> function gives by-item information. Again, you 
 <div id="step-5-visualise-the-data-1" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Step 5: Visualise the data<a href="answers.html#step-5-visualise-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>TASK 5B</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="answers.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> production)) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="answers.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a href="answers.html#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) <span class="sc">+</span></span>
-<span id="cb16-4"><a href="answers.html#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="answers.html#cb16-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> production)) <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="answers.html#cb16-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a href="answers.html#cb16-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="answers.html#cb16-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><strong>TASK 5C</strong>
 There are roughly similar numbers of children across ages between 16 and 30 months. The vocabulary measure is highly skewed, with more children producing 50 words or less.</p>
 <p><strong>TASK 5F</strong>
 The value of the alpha aesthetic determines the opacity (or transparency) of the individual data points.</p>
 <p><strong>TASK 5G</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
-<span id="cb17-2"><a href="answers.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb17-3"><a href="answers.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb17-4"><a href="answers.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="answers.html#cb17-2" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="answers.html#cb17-3" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb17-4"><a href="answers.html#cb17-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
 <p><strong>TASK 5H</strong>
 Darker areas of the plot reflect more overlapping data points in those areas.</p>
 <p><strong>TASK 5J</strong>
@@ -237,8 +249,8 @@ From the plot with lines of best fit, we can see that, on average, girls produce
           </div>
         </div>
       </div>
-<a href="during.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="during.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

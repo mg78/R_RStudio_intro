@@ -26,9 +26,9 @@ voc_cantonese_select <- voc_cantonese %>%
   write_csv(here('voc_cantonese_select.csv'))
 
 voc_cantonese_select <- read_csv(here('voc_cantonese_select.csv'))
-#voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
+voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
                                  
- # Step 5: Visualise the data ---------------------
+# Step 5: Visualise the data ---------------------
 
 # Histogram for age
 ggplot(voc_cantonese_select, aes(x = age)) + #Tell R what data to use in the first argument, then specify variable you want to plot in x = 

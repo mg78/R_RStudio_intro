@@ -34,6 +34,8 @@ Now let's read in data for words and sentences in Cantonese.
 get_adminstration_data(language = "", form = "")
 ```
 
+If reading in the data from the wordbankr package directly isn't working, please download this csv-file and use that instea [wordbank_voc.csv](files/wordbank_voc.csv)
+
 ## Step 3: Exploring the data
 Now let's get a feel for these data. Use one or more of the following functions to have a look: `dim()`, `str()`, `glimpse()`, `head()`, `tail()`, `skim()` and `summary()`.
 

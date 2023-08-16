@@ -190,6 +190,8 @@ You could write this up as follows: "A linear regression was performed with prod
 This follows APA guidelines which are widely used within psychology and psycholinguistics. The [**Purdue Writing lab website**](https://owl.purdue.edu/owl/research_and_citation/apa6_style/apa_formatting_and_style_guide/statistics_in_apa.html)) is helpful for guidance on punctuating statistics). Journals in linguistics might use different guidelines.
 
 # Answers
+Below you will find answers to tasks and questions in the tuition material. An R-script with only the code used, can be downloaded here: [R_RStudio_intro_codeOnly.R](files/R_RStudio_intro_codeOnly.R).
+
 ## Step 1: Loading packages
 **TASK 1B**
 library(here)

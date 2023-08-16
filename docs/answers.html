@@ -209,34 +209,34 @@ library(wordbankr)</p>
 The <code>get_administration_data()</code> function gives by-administration information. You can specify language and/or form.
 The <code>get_item_data()</code> function gives by-item information. Again, you can specify language and/or form.</p>
 <p><strong>TASK 2B</strong></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="answers.html#cb15-1" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="answers.html#cb16-1" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
 </div>
 <div id="step-3-exploring-the-data-1" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Step 3: Exploring the data<a href="answers.html#step-3-exploring-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong>TASK 3</strong>
-* There are 987 observations for 15 variables.
-* The variables data_id, age, comprehension, and production are numeric.
-* The following variables contain missing values: zygosity, birth_order, ethnicity, mom_ed.
-* The variable ‘longitudinal’ is a logical variable that can have the values ‘TRUE’ or ‘FALSE’.
+<p><strong>TASK 3</strong></p>
+<p><em>There are 1208 observations for 12 variables.
+</em>The variables data_id, age, comprehension, production and child_id are numeric (denoted as ‘num’ or ‘int’).
+<em>The variable ‘date_of_test’ has missing values, actually is missing for all 1208 observations of the ‘Words and sentences’ data in Cantonese.
+</em> The variable ‘is_norming’ is a logical variable that can have the values ‘TRUE’ or ‘FALSE’.
 * The minimum child age is 16 months.
-* Personally, I find the skim() function most informative as it groups different types of variables (character, logical, numeric etc.) and provides useful overviews (missing values, some summary statistics). I do however, also always use the head() and tail() functions to get a better feeling for the data.</p>
+* Personally, I find the <code>skim()</code> function most informative as it groups different types of variables (character, logical, numeric etc.) and provides useful overviews (missing values, some summary statistics). I do however, also often use the <code>head()</code> and <code>tail()</code> functions to get a better feeling for the data.</p>
 </div>
 <div id="step-5-visualise-the-data-1" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Step 5: Visualise the data<a href="answers.html#step-5-visualise-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>TASK 5B</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="answers.html#cb16-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> production)) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="answers.html#cb16-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a href="answers.html#cb16-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) <span class="sc">+</span></span>
-<span id="cb16-4"><a href="answers.html#cb16-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> production)) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="answers.html#cb17-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb17-3"><a href="answers.html#cb17-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="answers.html#cb17-4" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><strong>TASK 5C</strong>
 There are roughly similar numbers of children across ages between 16 and 30 months. The vocabulary measure is highly skewed, with more children producing 50 words or less.</p>
 <p><strong>TASK 5F</strong>
 The value of the alpha aesthetic determines the opacity (or transparency) of the individual data points.</p>
 <p><strong>TASK 5G</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
-<span id="cb17-2"><a href="answers.html#cb17-2" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb17-3"><a href="answers.html#cb17-3" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb17-4"><a href="answers.html#cb17-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="answers.html#cb18-1" tabindex="-1"></a><span class="fu">ggplot</span>(voc_cantonese_select, <span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> production)) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="answers.html#cb18-2" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="answers.html#cb18-3" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb18-4"><a href="answers.html#cb18-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Age (in months)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Productive vocabulary&quot;</span>) </span></code></pre></div>
 <p><strong>TASK 5H</strong>
 Darker areas of the plot reflect more overlapping data points in those areas.</p>
 <p><strong>TASK 5J</strong>

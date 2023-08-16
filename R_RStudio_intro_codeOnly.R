@@ -1,6 +1,17 @@
 # Practical session on R and RStudio
 
 # Step 1: Loading packages -------------------
+# Check relevant packages are installed, if not install them. Only have to do this once.
+install.packages("here")
+install.packages("tidyverse")
+install.packages("skimr")
+install.packages("wordbankr")
+
+## Having difficulty installing wordbankr, install directly from github
+install.packages("devtools")
+devtools::install_github("langcog/wordbankr")
+
+# Loading packages (have to do this every time you start a new R session)
 library(here)
 library(tidyverse)
 library(skimr)
@@ -26,7 +37,7 @@ voc_cantonese_select <- voc_cantonese %>%
   write_csv(here('voc_cantonese_select.csv'))
 
 voc_cantonese_select <- read_csv(here('voc_cantonese_select.csv'))
-voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
+#voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
                                  
 # Step 5: Visualise the data ---------------------
 

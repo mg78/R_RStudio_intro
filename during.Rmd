@@ -212,11 +212,16 @@ voc_cantonese <- get_adminstration_data(language = "Cantonese", form = "WS"")
 
 **TASK 3**
 
-*There are 1208 observations for 12 variables.
-*The variables data_id, age, comprehension, production and child_id are numeric (denoted as 'num' or 'int').
-*The variable 'date_of_test' has missing values, actually is missing for all 1208 observations of the 'Words and sentences' data in Cantonese.
+* There are 1208 observations for 12 variables.
+
+* The variables data_id, age, comprehension, production and child_id are numeric (denoted as 'num' or 'int').
+
+* The variable 'date_of_test' has missing values, actually is missing for all 1208 observations of the 'Words and sentences' data in Cantonese.
+
 * The variable 'is_norming' is a logical variable that can have the values 'TRUE' or 'FALSE'.
+
 * The minimum child age is 16 months.
+
 * Personally, I find the `skim()` function most informative as it groups different types of variables (character, logical, numeric etc.) and provides useful overviews (missing values, some summary statistics). I do however, also often use the `head()` and `tail()` functions to get a better feeling for the data. 
 
 ## Step 5: Visualise the data

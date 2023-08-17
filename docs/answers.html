@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Margriet A. Groen" />
 
 
-<meta name="date" content="2023-08-16" />
+<meta name="date" content="2023-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -210,16 +210,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 The <code>get_administration_data()</code> function gives by-administration information. You can specify language and/or form.
 The <code>get_item_data()</code> function gives by-item information. Again, you can specify language and/or form.</p>
 <p><strong>TASK 2B</strong></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_adminstration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="answers.html#cb17-1" tabindex="-1"></a>voc_cantonese <span class="ot">&lt;-</span> <span class="fu">get_administration_data</span>(<span class="at">language =</span> <span class="st">&quot;Cantonese&quot;</span>, <span class="at">form =</span> <span class="st">&quot;WS&quot;</span>, <span class="at">include_demographic_info =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <div id="step-3-exploring-the-data-1" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Step 3: Exploring the data<a href="answers.html#step-3-exploring-the-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>TASK 3</strong></p>
 <ul>
-<li><p>There are 1208 observations for 12 variables.</p></li>
+<li><p>There are 1208 observations for 17 variables.</p></li>
 <li><p>The variables data_id, age, comprehension, production and child_id are numeric (denoted as ‘num’ or ‘int’).</p></li>
 <li><p>The variable ‘date_of_test’ has missing values, actually is missing for all 1208 observations of the ‘Words and sentences’ data in Cantonese.</p></li>
 <li><p>The variable ‘is_norming’ is a logical variable that can have the values ‘TRUE’ or ‘FALSE’.</p></li>
+<li><p>The variable sex is a factor. There are 633 males and 575 females in the dataset.</p></li>
 <li><p>The minimum child age is 16 months.</p></li>
 <li><p>Personally, I find the <code>skim()</code> function most informative as it groups different types of variables (character, logical, numeric etc.) and provides useful overviews (missing values, some summary statistics). I do however, also often use the <code>head()</code> and <code>tail()</code> functions to get a better feeling for the data.</p></li>
 </ul>

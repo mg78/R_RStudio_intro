@@ -31,20 +31,20 @@ library()
 ## Step 2: Read in the data
 We will be working with some 'Wordbank' data. Wordbank is a large open database of children's vocabulary development. More commonly, you'll be accessing data by reading in a file (such as a .csv file). However, the Workbank data can be accessed from R via the 'wordbankr' package. You can read more about Wordbank on their [**website**](http://wordbank.stanford.edu) and in their free [**online book**](https://wordbank-book.stanford.edu).
 
->**TASK 2A**: Let's check the vignette of the wordbankr package to learn a bit more about the package and accessing the data. If you have successfully installed the 'wordbankr' package, you can type ??wordbankr in the console. A link to the vignette should appear in the 'Help' tab in the bottom right window. Click on the link, have a look at the vignette and try to work out what the `get_administration_data()` function does? How is it different from the `get_item_data()` function? If this doesn't work for you, you can also access the vignette [**here**](https://langcog.github.io/wordbankr/articles/wordbankr.html).
+>**TASK 2A**: Let's check the vignette of the wordbankr package to learn a bit more about the package and accessing the data. If you have successfully installed the 'wordbankr' package, you can type ??wordbankr in the console. A link to the vignette should appear in the 'Help' tab in the bottom right window. Click on the link, have a look at the vignette and try to work out what the `get_administration_data()` function does? How is it different from the `get_item_data()` function? If this doesn't work for you, you can also access the vignette [**here**](https://langcog.github.io/wordbankr/articles/wordbankr.html). The `get_administration_data)` function takes different arguments (those are the things you can specify in the brackets. For our purposes today the 'language', 'form' and 'include_demographic_info' arguments are relevant. What do you think each of them does? 
 
-Now let's read in data for words and sentences in Cantonese.
+Now let's read in data for words and sentences in Cantonese. Later on we want to test the hypothesis that age and sex predict vocabulary development. We expect older children to know more words and the literature also suggests (although not conclusively) better language skills in girls (see the section on [**Demographic effects on Vocabulary Size**](https://langcog.github.io/wordbank-book/demographics.html) of the free online Wordbank book for a brief summary). Is that true for this age group and in Cantonese? So in addition to specifying the language (Cantonese) and the form (Words and sentences), we also need to specify that we want demographic information when reading the data. We can do this using the 'include_demographic_info' argument.
 
 >**TASK 2B**: Use the code snippet below to read in data for WS (words and sentences) form in Cantonese. Assign the data to a dataframe called 'voc_cantonese'.
 
 ```{r eval=FALSE}
-get_adminstration_data(language = "", form = "")
+get_adminstration_data(language = "", form = "", include_demographic_info = )
 ```
 
 ## Step 3: Exploring the data
 Now let's get a feel for these data. Use one or more of the following functions to have a look: `dim()`, `str()`, `glimpse()`, `head()`, `tail()`, `skim()` and `summary()`.
 
->**TASK 3**: Answer the following questions: How many observations are there for how many variables? Which of these variables numeric? Which of these variables contain missing values ('NA's)? What type of variable is 'is_norming'? What is the minimum child age? Which of these functions do you find most informative and why?
+>**TASK 3**: Answer the following questions: How many observations are there for how many variables? Which of these variables numeric? Which of these variables contain missing values ('NA's)? What type of variable is 'is_norming'? What type of vaiable is 'sex'? How many of the observations are from male and female children? What is the minimum child age? Which of these functions do you find most informative and why?
 
 ```{r eval=FALSE}
 dim(voc_cantonese)
@@ -185,7 +185,7 @@ When we call 'mod_summary', R writes the content of that dataframe to the consol
 
 ## Step 7: Write up the results
 
-You could write this up as follows: "A linear regression was performed with productive vocabulary (*M* = 273, *SD* = 220) as the outcome variable and age (*M* = 23.2, *SD* = 4.2) and sex (485 girls, 502 boys) as the predictor variables. The results of the regression indicated that the model significantly predicted productive vocabulary (*F*(2, 984) = 539.4, *p* < .001, adjusted R2 = 0.52), accounting for 52% of the variance. Age was a significant positive predictor (*beta* = 37.29, *p* < .001): as age increased, productive vocabulary increased. Boys scored lower than girls (beta = -49.92, p < .001)."
+You could write this up as follows: "A linear regression was performed with productive vocabulary (*M* = 287, *SD* = 227) as the outcome variable and age (*M* = 23.4, *SD* = 4.36) and sex (575 girls, 633 boys) as the predictor variables. The results of the regression indicated that the model significantly predicted productive vocabulary (*F*(2, 1205) = 720.1, *p* < .001, adjusted R2 = 0.54), accounting for 54% of the variance. Age was a significant positive predictor (*beta* = 37.84, *p* < .001): as age increased, productive vocabulary increased. Boys scored lower than girls (beta = -52.13, p < .001)."
 
 This follows APA guidelines which are widely used within psychology and psycholinguistics. The [**Purdue Writing lab website**](https://owl.purdue.edu/owl/research_and_citation/apa6_style/apa_formatting_and_style_guide/statistics_in_apa.html)) is helpful for guidance on punctuating statistics). Journals in linguistics might use different guidelines.
 
@@ -208,19 +208,21 @@ The `get_item_data()` function gives by-item information. Again, you can specify
 
 **TASK 2B**
 ```{r eval=FALSE}
-voc_cantonese <- get_adminstration_data(language = "Cantonese", form = "WS"")
+voc_cantonese <- get_administration_data(language = "Cantonese", form = "WS", include_demographic_info = TRUE)
 ```
 ## Step 3: Exploring the data
 
 **TASK 3**
 
-* There are 1208 observations for 12 variables.
+* There are 1208 observations for 17 variables.
 
 * The variables data_id, age, comprehension, production and child_id are numeric (denoted as 'num' or 'int').
 
 * The variable 'date_of_test' has missing values, actually is missing for all 1208 observations of the 'Words and sentences' data in Cantonese.
 
 * The variable 'is_norming' is a logical variable that can have the values 'TRUE' or 'FALSE'.
+
+* The variable sex is a factor. There are 633 males and 575 females in the dataset.
 
 * The minimum child age is 16 months.
 

@@ -37,7 +37,7 @@ voc_cantonese_select <- voc_cantonese %>%
   write_csv(here('voc_cantonese_select.csv'))
 
 voc_cantonese_select <- read_csv(here('voc_cantonese_select.csv'))
-#voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
+voc_cantonese_select <- read_csv(here("docs/files","voc_cantonese_select.csv"))
                                  
 # Step 5: Visualise the data ---------------------
 

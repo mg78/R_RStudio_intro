@@ -18,7 +18,7 @@ library(skimr)
 library(wordbankr)
 
 # Step 2: Read in the data --------------------
-voc_cantonese <- get_administration_data(language = "Cantonese", form = "WS")
+voc_cantonese <- get_administration_data(language = "Cantonese", form = "WS", include_demographic_info = TRUE)
 
 # Step 3: Exploring the data -------------------
 dim(voc_cantonese)
